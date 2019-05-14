@@ -1,0 +1,8 @@
+.alinhar-centro{
+    position: relative;
+    top: 30px;
+    display: table;
+    margin: auto;
+    width: 320px;
+    height: 270px;
+}
