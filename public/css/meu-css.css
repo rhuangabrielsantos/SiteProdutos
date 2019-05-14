@@ -12,6 +12,6 @@
     top: 30px;
     display: table;
     margin: auto;
-    width: 480px;
-    height: 100px;
+    width: auto;
+    height: auto;
 }
