@@ -1,1 +1,3 @@
-<?php echo "Hello World";
+<?php
+
+include "app/views/listaProdutos/index.php";
