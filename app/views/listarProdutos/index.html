@@ -2,6 +2,7 @@
 
     <head>
         <link href="/public/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="/public/css/meu-css.css" rel="stylesheet">
         <meta charset="UTF-8">
         <title>Lista dos Produtos</title>
     </head>
@@ -11,7 +12,7 @@
             <div id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/app/views/listaProdutos">Lista dos Produtos</a>
+                        <a class="nav-link" href="/app/views/listarProdutos">Lista dos Produtos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/app/views/adicionarProduto">Adicionar Produtos</a>
@@ -23,16 +24,22 @@
             </div>
         </nav>
 
-
-
-
-
-
-
-
-
+        <table class="table area">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Custo</th>
+                    <th scope="col">Venda</th>
+                </tr>
+            </thead>
+            <tbody id="lista-produtos">
+            </tbody>
+        </table>
 
         <script src="/public/js/jquery-3.3.1.js"></script>
+        <script src="/public/js/listaProdutos.js"></script>
     </body>
 
 </html>

@@ -12,7 +12,7 @@
             <div id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/app/views/listaProdutos">Lista dos Produtos</a>
+                        <a class="nav-link" href="/app/views/listarProdutos">Lista dos Produtos</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="/app/views/adicionarProduto">Adicionar Produtos</a>
@@ -24,34 +24,27 @@
             </div>
         </nav>
 
-        <form>
+        <form id="form-produtos">
             <div class="alinhar-centro">
                 <div class="form-group">
-                    <label>Nome:</label>
-                    <input type="text" class="form-control" id="name">
-                </div>
-
-                <div class="form-group">
                     <label>Descrição:</label>
-                    <textarea class="form-control" id="descricao"></textarea>
+                    <input type="text" class="form-control" name="descricao">
                 </div>
 
                 <div class="form-group">
-                    <label>Categorias:</label>
-                    <select class="form-control">
-                        <option>Categoria 1</option>
-                        <option>Categoria 2</option>
+                    <label>Categoria:</label>
+                    <select class="custom-select" id="lista-categorias" name="categoria" >
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label>Valor do Custo:</label>
-                    <input type="number" id="valor_custo" class="form-control" placeholder="0,00">
+                    <input type="number" step="0.01" name="valor_custo" class="form-control" placeholder="0,00">
                 </div>
 
                 <div class="form-group">
                     <label>Valor de Venda:</label><br/>
-                    <input type="number" id="valor_venda" class="form-control" placeholder="0,00">
+                    <input type="number" step="0.01" name="valor_venda" class="form-control" placeholder="0,00">
                 </div>
                 <div>
                     <input type="submit" class="btn btn-primary" value="Adicionar">
@@ -60,6 +53,8 @@
         </form>
 
         <script src="/public/js/jquery-3.3.1.js"></script>
+        <script src="/public/js/listaCategorias.js"></script>
+        <script src="/public/js/produtos.js"></script>
     </body>
 
 </html>

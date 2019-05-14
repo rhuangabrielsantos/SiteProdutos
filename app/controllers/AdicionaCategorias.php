@@ -1,6 +1,6 @@
 <?php
 
-include "conexao.php";
+include "Connect.php";
 
 $params = array();
 parse_str($_POST['dados'], $params);

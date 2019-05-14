@@ -10,7 +10,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - /listaProdutos/rhuan.santos@db1.com.br/Dev/SiteProdutos:/app
+      - /listarProdutos/rhuan.santos@db1.com.br/Dev/SiteProdutos:/app
     depends_on:
       - db
     links:

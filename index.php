@@ -1,3 +1,3 @@
 <?php
 
-include "app/views/listaProdutos/index.php";
+include "app/views/listarProdutos/index.html";
