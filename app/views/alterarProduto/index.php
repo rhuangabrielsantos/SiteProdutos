@@ -26,7 +26,7 @@
 </nav>
 
 <div>
-    <form id="form-alterar">
+    <form id="form-alterar" method="post">
     </form>
 </div>
 
@@ -51,7 +51,7 @@
                         '<div class="form-group">' +
                         '<label>Categoria:</label>' +
                         '<select class="custom-select" id="lista-categorias" name="categoria">' +
-                            '<option selected>'+ produtos.categoria +'</option>'+
+                        '<option selected>' + produtos.categoria + '</option>' +
                         '</select>' +
                         '</div>' +
 
@@ -67,6 +67,9 @@
                         'value="' + produtos.valor_venda + '">' +
                         '</div>' +
                         '<div>' +
+                        '<input type="hidden" name="id" value="' + produtos.id + '">' +
+                        '</div>' +
+                        '<div>' +
                         '<input type="submit" class="btn btn-primary" value="Adicionar">' +
                         '</div>' +
                         '</div>'
@@ -75,7 +78,7 @@
             }
         });
 
-        $('#formulario').submit(function (event) {
+        $('#form-alterar').submit(function (event) {
             event.preventDefault();
 
             $.ajax({
@@ -85,8 +88,8 @@
                 data: {
                     'dados': $('form').serialize()
                 },
-                success: function () {
-                    alert("Registrado com Sucesso!");
+                success: function ($msg) {
+                    alert($msg);
                     location.reload();
                 }
             })
