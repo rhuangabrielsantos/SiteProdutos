@@ -74,7 +74,7 @@
         $.ajax({
             type: "POST",
             url: "/app/controllers/DeleteCategoria.php",
-            data: "id=" + id,
+            data: {id: id},
             success: function () {
                 alert("Deletado com Sucesso!");
                 location.reload();
@@ -83,7 +83,7 @@
     }
 
     function editar(id) {
-        $("body").load("/app/views/alterarCategoria/index.php", {id: id});
+        $("body").load("/app/views/alterarCategoria/index.phtml", {id: id});
     }
 
 </script>

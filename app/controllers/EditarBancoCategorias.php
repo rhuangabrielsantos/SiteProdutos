@@ -5,7 +5,7 @@ include "Connect.php";
 $params = array();
 parse_str($_POST['dados'], $params);
 
-$query = "UPDATE categorias SET nome='{$params[nome]}' WHERE id='{$params[id]}'";
+$query = "UPDATE categorias SET nome='{$params['nome']}' WHERE id='{$params['id']}'";
 
 $resultado = mysqli_query($con, $query);
 
