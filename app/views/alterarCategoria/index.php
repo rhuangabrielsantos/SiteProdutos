@@ -40,41 +40,24 @@
         $.ajax({
             dataType: 'json',
             type: "POST",
-            url: '/app/controllers/IdProdutos.php',
+            url: '/app/controllers/IdCategorias.php',
             data: "id=" + <?=$id?>,
             success: function (arr) {
-                arr.forEach(produtos => {
+                arr.forEach(categoria => {
                     $('#form-alterar').append(
                         '<div class="alinhar-centro">' +
-                        '<div class="form-group">' +
-                        '<label>Descrição:</label>' +
-                        '<input type="text" class="form-control" name="descricao" value="' + produtos.descricao + '">' +
-                        '</div>' +
+                            '<div class="form-group">' +
+                                '<label>Nome:</label>' +
+                                '<input type="text" class="form-control" name="nome" value="' + categoria.nome + '">' +
+                            '</div>' +
 
-                        '<div class="form-group">' +
-                        '<label>Categoria:</label>' +
-                        '<select class="custom-select" id="lista-categorias" name="categoria">' +
-                        '<option selected>' + produtos.categoria + '</option>' +
-                        '</select>' +
-                        '</div>' +
+                            '<div>' +
+                                '<input type="hidden" name="id" value="' + categoria.id + '">' +
+                            '</div>' +
 
-                        '<div class="form-group">' +
-                        '<label>Valor do Custo:</label>' +
-                        '<input type="number" step="0.01" name="valor_custo" class="form-control" placeholder="0,00" ' +
-                        'value="' + produtos.valor_custo + '">' +
-                        '</div>' +
-
-                        '<div class="form-group">' +
-                        '<label>Valor de Venda:</label><br/>' +
-                        '<input type="number" step="0.01" name="valor_venda" class="form-control" placeholder="0,00" ' +
-                        'value="' + produtos.valor_venda + '">' +
-                        '</div>' +
-                        '<div>' +
-                        '<input type="hidden" name="id" value="' + produtos.id + '">' +
-                        '</div>' +
-                        '<div>' +
-                        '<input type="submit" class="btn btn-primary" value="Adicionar">' +
-                        '</div>' +
+                            '<div>' +
+                                '<input type="submit" class="btn btn-primary" value="Adicionar">' +
+                            '</div>' +
                         '</div>'
                     )
                 })
@@ -86,7 +69,7 @@
 
             $.ajax({
                 type: 'POST',
-                url: '/app/controllers/EditarBancoProdutos.php',
+                url: '/app/controllers/EditarBancoCategorias.php',
                 cache: false,
                 data: {
                     'dados': $('form').serialize()
