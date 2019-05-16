@@ -19,13 +19,18 @@ class CategoriaControl
 
     public static function listaCategoria()
     {
-        $queryList = CategoriaModel::listaCategorias();
+        $queryList = CategoriaModel::listaCategoria();
 
         while ($result = mysqli_fetch_assoc($queryList)) {
             $arr[] = $result;
         }
 
         echo json_encode($arr);
+    }
+
+    public static function deletarCategoria($id)
+    {
+        CategoriaModel::deletarCategoria($id);
     }
 
 }

@@ -2,7 +2,7 @@ $(document).ready(function () {
     $.ajax({
         dataType: 'json',
         type: "POST",
-        url: '/app/controllers/ListaCategorias.php',
+        url: '/app/index.php?controller=listaCategoria',
         success: function (arr) {
             arr.forEach(categoria => {
                 $('#lista-categorias').append(

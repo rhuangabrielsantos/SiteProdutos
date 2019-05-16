@@ -23,7 +23,7 @@ $(document).ready(function () {
 function excluir(id) {
     $.ajax({
         type: "POST",
-        url: "/app/controllers/DeleteCategoria.php",
+        url: "/app/index.php?controller=deletarCategoria",
         data: {id: id},
         success: function () {
             alert("Deletado com Sucesso!");
