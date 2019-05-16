@@ -8,4 +8,9 @@ class CategoriaModel
     {
         return DB::query("INSERT INTO categorias (nome) VALUES ('{$nome}')");
     }
+
+    static function listaCategorias()
+    {
+        return DB::query("SELECT * FROM categorias");
+    }
 }

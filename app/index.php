@@ -7,6 +7,10 @@ $nome = $_POST['nome'];
 
 switch ($route) {
 
+    case 'listaCategoria':
+        CategoriaControl::listaCategoria();
+        break;
+
     case 'adicionaCategoria':
         CategoriaControl::adicionaCategoria($nome);
         break;

@@ -13,6 +13,19 @@ class CategoriaControl
         } else {
             $msg = "Categoria já adicionada!";
         }
+
         echo $msg;
     }
+
+    public static function listaCategoria()
+    {
+        $queryList = CategoriaModel::listaCategorias();
+
+        while ($result = mysqli_fetch_assoc($queryList)) {
+            $arr[] = $result;
+        }
+
+        echo json_encode($arr);
+    }
+
 }
