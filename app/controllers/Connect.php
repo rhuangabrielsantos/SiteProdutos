@@ -1,1 +1,0 @@
-<?php $con = mysqli_connect('db', 'root', 'password', 'app_development');

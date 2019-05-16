@@ -47,7 +47,7 @@
         $.ajax({
             dataType: 'json',
             type: "POST",
-            url: '/app/controllers/IdProdutos.php',
+            url: '/app/index.php?controller=idProduto.php',
             data: "id=" + <?=$id?>,
             success: function (arr) {
                 arr.forEach(produtos => {
@@ -93,11 +93,9 @@
 
             $.ajax({
                 type: 'POST',
-                url: '/app/controllers/EditarBancoProdutos.php',
+                url: '/app/index.php?controller=editarProduto.php',
                 cache: false,
-                data: {
-                    'dados': $('form').serialize()
-                },
+                data: $('form').serialize(),
                 success: function ($msg) {
                     alert($msg);
                     location.reload();
