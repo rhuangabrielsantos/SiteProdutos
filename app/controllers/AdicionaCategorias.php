@@ -1,12 +1,8 @@
 <?php
 
-include "Connect.php";
+include __DIR__ . "/../../lib/DB.php";
 
-$params = array();
-parse_str($_POST['dados'], $params);
-
-$query = "INSERT INTO categorias (nome) VALUES ('{$params['nome']}')";
-$resultado = mysqli_query($con, $query);
+$resultado = DB::query("INSERT INTO categorias (nome) VALUES ('{$_POST['nome']}')");
 
 if ($resultado == 1) {
     $msg = "Categoria adicionada com sucesso!";
@@ -14,4 +10,4 @@ if ($resultado == 1) {
     $msg = "Categoria já adicionada!";
 }
 
-echo "$msg";
+echo $msg;

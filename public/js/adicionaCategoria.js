@@ -3,11 +3,9 @@ $('#form-categorias').submit(function (event) {
 
     $.ajax({
         type: 'POST',
-        url: '/app/controllers/AdicionaCategorias.php',
+        url: '/app/index.php?controller=adicionaCategoria',
         cache: false,
-        data: {
-            'dados': $('form').serialize()
-        },
+        data: $('form').serialize(),
         success: function ($msg) {
             alert($msg);
             location.reload();
