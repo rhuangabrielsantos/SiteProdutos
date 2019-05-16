@@ -107,7 +107,7 @@
     });
 </script>
 
-<script src="/public/js/listaCategoriasEdit.js"></script>
+<script src="/public/js/listaCategoriasForm.js"></script>
 
 </body>
 

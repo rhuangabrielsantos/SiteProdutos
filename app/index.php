@@ -19,4 +19,12 @@ switch ($route) {
     case 'deletarCategoria':
         CategoriaControl::deletarCategoria($id);
         break;
+
+    case 'idCategoria':
+        CategoriaControl::idCategoria($id);
+        break;
+
+    case 'editarCategoria':
+        CategoriaControl::editarCategoria($id, $nome);
+        break;
 }

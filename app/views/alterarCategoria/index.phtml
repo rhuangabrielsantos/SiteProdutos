@@ -47,8 +47,8 @@
         $.ajax({
             dataType: 'json',
             type: "POST",
-            url: '/app/controllers/IdCategorias.php',
-            data: "id=" + <?=$id?>,
+            url: '/app/index.php?controller=idCategoria',
+            data: {id: <?=$id?>},
             success: function (arr) {
                 arr.forEach(categoria => {
                     $('#form-alterar').append(
@@ -71,17 +71,14 @@
                 })
             }
         });
-
         $('#form-alterar').submit(function (event) {
             event.preventDefault();
 
             $.ajax({
                 type: 'POST',
-                url: '/app/controllers/EditarBancoCategorias.php',
+                url: '/app/index.php?controller=editarCategoria',
                 cache: false,
-                data: {
-                    'dados': $('form').serialize()
-                },
+                data: $('form').serialize(),
                 success: function ($msg) {
                     alert($msg);
                     location.reload();
@@ -89,8 +86,9 @@
             })
         });
     });
+
 </script>
 
-<script src="/public/js/listaCategoriasEdit.js"></script>
+<script src="/public/js/listaCategoriasForm.js"></script>
 </body>
 </html>

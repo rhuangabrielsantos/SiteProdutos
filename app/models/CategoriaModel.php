@@ -18,4 +18,14 @@ class CategoriaModel
     {
         return DB::query("DELETE FROM categorias WHERE id='{$id}'");
     }
+
+    static function idCategoria($id)
+    {
+        return DB::query("SELECT * FROM categorias WHERE id='{$id}'");
+    }
+
+    static function editarCategoria($id, $nome)
+    {
+        return DB::query("UPDATE categorias SET nome='{$nome}' WHERE id='{$id}'");
+    }
 }
