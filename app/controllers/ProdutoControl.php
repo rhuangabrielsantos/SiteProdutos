@@ -31,13 +31,9 @@ class ProdutoControl
 
     public static function idProduto($id)
     {
-        $queryList = ProdutoModel::idProduto($id);
+        $arr = ProdutoModel::idProduto($id);
 
-        while ($result = mysqli_fetch_assoc($queryList)) {
-            $arr[] = $result;
-        }
-
-        echo json_encode($arr);
+        echo $arr;
     }
 
     public static function editarProduto($descricao, $categoria, $valor_custo, $valor_venda, $id)

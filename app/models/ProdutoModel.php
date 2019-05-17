@@ -28,7 +28,13 @@ class ProdutoModel
 
     public static function idProduto($id)
     {
-        return DB::query("SELECT * FROM produtos WHERE id='{$id}'");
+        $queryList = DB::query("SELECT * FROM produtos WHERE id='{$id}'");
+
+        while ($result = mysqli_fetch_assoc($queryList)) {
+            $arr[] = $result;
+        }
+
+        return json_encode($arr);
     }
 
     public static function editarProduto($descricao, $categoria, $valor_custo, $valor_venda, $id)
