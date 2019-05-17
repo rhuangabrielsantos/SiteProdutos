@@ -19,13 +19,9 @@ class CategoriaControl
 
     public static function listaCategoria()
     {
-        $queryList = CategoriaModel::listaCategoria();
+        $result = CategoriaModel::listaCategoria();
 
-        while ($result = mysqli_fetch_assoc($queryList)) {
-            $arr[] = $result;
-        }
-
-        echo json_encode($arr);
+        echo $result;
     }
 
     public static function deletarCategoria($id)
@@ -35,13 +31,9 @@ class CategoriaControl
 
     public static function idCategoria($id)
     {
-        $queryLista = CategoriaModel::idCategoria($id);
+        $arr = CategoriaModel::idCategoria($id);
 
-        while ($result = mysqli_fetch_assoc($queryLista)) {
-            $arr[] = $result;
-        }
-
-        echo json_encode($arr);
+        echo $arr;
     }
 
     public static function editarCategoria($id, $nome)

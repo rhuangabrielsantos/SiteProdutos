@@ -7,11 +7,19 @@ class CategoriaModel
     static function adicionaCategoria($nome)
     {
         return DB::query("INSERT INTO categorias (nome) VALUES ('{$nome}')");
+
     }
 
     static function listaCategoria()
     {
-        return DB::query("SELECT * FROM categorias");
+        $queryList = DB::query("SELECT * FROM categorias");
+
+        while ($result = mysqli_fetch_assoc($queryList)) {
+            $arr[] = $result;
+        }
+
+        return json_encode($arr);
+
     }
 
     static function deletarCategoria($id)
@@ -21,7 +29,13 @@ class CategoriaModel
 
     static function idCategoria($id)
     {
-        return DB::query("SELECT * FROM categorias WHERE id='{$id}'");
+        $queryList = DB::query("SELECT * FROM categorias WHERE id='{$id}'");
+
+        while ($result = mysqli_fetch_assoc($queryList)){
+            $arr[] = $result;
+        }
+
+        return json_encode($arr);
     }
 
     static function editarCategoria($id, $nome)

@@ -26,10 +26,10 @@ $(document).ready(function () {
 function excluir(id) {
     $.ajax({
         type: "POST",
-        url: "/app/index.php?controller=deleteProduto.php",
+        url: "/app/index.php?controller=deletarProduto",
         data: {id: id},
         success: function () {
-            alert("Deletado com Sucesso!");
+            alert("Produto Deletado com Sucesso!");
             location.reload();
         }
     });

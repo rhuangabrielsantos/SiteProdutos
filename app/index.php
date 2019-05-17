@@ -48,7 +48,7 @@ switch ($route) {
         ProdutoControl::listaProduto();
         break;
 
-    case 'deletarProtudo':
+    case 'deletarProduto':
         ProdutoControl::deletarProduto($id);
         break;
 
@@ -57,6 +57,6 @@ switch ($route) {
         break;
 
     case 'editarProduto':
-        ProdutoControl::editarProduto($descricao, $categoria, $valor_custo, $valor_venda);
+        ProdutoControl::editarProduto($descricao, $categoria, $valor_custo, $valor_venda, $id);
         break;
 }

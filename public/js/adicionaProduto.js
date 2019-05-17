@@ -3,7 +3,7 @@ $('#form-produtos').submit(function (event) {
 
     $.ajax({
         type: 'POST',
-        url: '/app/index.php?controller?adicionaProduto',
+        url: '/app/index.php?controller=adicionaProduto',
         cache: false,
         data: $('form').serialize(),
         success: function ($msg) {

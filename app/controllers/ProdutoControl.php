@@ -19,13 +19,9 @@ class ProdutoControl
 
     public static function listaProduto()
     {
-        $queryList = ProdutoModel::listaProduto();
+        $arr = ProdutoModel::listaProduto();
 
-        while ($result = mysqli_fetch_assoc($queryList)) {
-            $arr[] = $result;
-        }
-
-        echo json_encode($arr);
+        echo $arr;
     }
 
     public static function deletarProduto($id)
@@ -44,9 +40,9 @@ class ProdutoControl
         echo json_encode($arr);
     }
 
-    public static function editarProduto($descricao, $categoria, $valor_custo, $valor_venda)
+    public static function editarProduto($descricao, $categoria, $valor_custo, $valor_venda, $id)
     {
-        $result = ProdutoModel::editarProduto($descricao, $categoria, $valor_custo, $valor_venda);
+        $result = ProdutoModel::editarProduto($descricao, $categoria, $valor_custo, $valor_venda, $id);
 
         if ($result == 1) {
             $msg = "Produto alterado com sucesso!";

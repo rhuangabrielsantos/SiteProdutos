@@ -12,7 +12,13 @@ class ProdutoModel
 
     public static function listaProduto()
     {
-        return DB::query("SELECT * FROM produtos");
+        $queryList = DB::query("SELECT * FROM produtos");
+
+        while ($result = mysqli_fetch_assoc($queryList)) {
+            $arr[] = $result;
+        }
+
+        return json_encode($arr);
     }
 
     public static function deletarProduto($id)
@@ -25,9 +31,9 @@ class ProdutoModel
         return DB::query("SELECT * FROM produtos WHERE id='{$id}'");
     }
 
-    public static function editarProduto($descricao, $categoria, $valor_custo, $valor_venda)
+    public static function editarProduto($descricao, $categoria, $valor_custo, $valor_venda, $id)
     {
-        return DB::query("UPDATE produtos SET descricao='{$descricao}', categoria='{$categoria}'
-                                valor_custo='{$valor_custo}', valor_venda='{$valor_venda}'");
+        return DB::query("UPDATE produtos SET descricao='{$descricao}', categoria='{$categoria}',
+                                valor_custo='{$valor_custo}', valor_venda='{$valor_venda}' WHERE id='{$id}'");
     }
 }
