@@ -6,7 +6,7 @@ $(document).ready(function () {
         success: function (arr) {
             arr.forEach(categoria => {
                 $('#lista-categorias').append(
-                    '<option value="'+categoria.nome+'">'+categoria.nome+'</option>'
+                    '<option value="' + categoria.id + '">' + categoria.nome + '</option>'
                 )
             })
         }

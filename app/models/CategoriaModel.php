@@ -7,7 +7,6 @@ class CategoriaModel
     static function adicionaCategoria($nome)
     {
         return DB::query("INSERT INTO categorias (nome) VALUES ('{$nome}')");
-
     }
 
     static function listaCategoria()
@@ -19,7 +18,6 @@ class CategoriaModel
         }
 
         return json_encode($arr);
-
     }
 
     static function deletarCategoria($id)
