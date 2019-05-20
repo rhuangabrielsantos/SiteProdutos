@@ -1,35 +1,28 @@
 <html>
 <head>
-    <title>Inicio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bem Vindo!</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="public/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="public/css/meu-css.css">
     <script src="public/js/jquery-3.3.1.js"></script>
     <script src="public/js/popper.js"></script>
     <script src="public/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="index.html">Inicio</a>
-    <div class="dropdown">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-            Produtos
-        </button>
-        <div class="dropdown-menu">
-            <a class="nav-link" href="/app/views/listarProdutos">Lista dos Produtos</a>
-            <a class="nav-link" href="/app/views/adicionarProduto">Adicionar Produtos</a>
-        </div>
+<form id="login" class="login">
+    <div class="form-group">
+        <label>Usuario:</label>
+        <input type="text" class="form-control" name="usuario" placeholder="Insira seu usuario">
     </div>
-    <div class="dropdown">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-            Categorias
-        </button>
-        <div class="dropdown-menu">
-            <a class="nav-link" href="/app/views/listarCategorias">Lista das Categoria</a>
-            <a class="nav-link" href="/app/views/adicionarCategoria">Adicionar Categoria</a>
-        </div>
+    <div class="form-group">
+        <label>Senha:</label>
+        <input type="password" class="form-control" name="senha" placeholder="Insira sua senha">
     </div>
-</nav>
+    <button type="submit" class="btn btn-primary">Entrar</button>
+</form>
+
+<script src="public/js/verificaLogin.js"></script>
 
 </body>
 </html>

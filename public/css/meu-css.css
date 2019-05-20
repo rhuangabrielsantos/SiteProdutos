@@ -15,3 +15,12 @@
     width: auto;
     height: auto;
 }
+
+.login {
+    position: relative;
+    top: 100px;
+    display: table;
+    margin: auto;
+    width: 320px;
+    height: 270px;
+}
