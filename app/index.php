@@ -68,4 +68,8 @@ switch ($route) {
     case 'verificaLogin':
         UsuarioControl::verificaLogin($usuario, $senha);
         break;
+
+    case 'registraUsuario':
+        UsuarioControl::registraUsuario($usuario, $senha);
+        break;
 }

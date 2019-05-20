@@ -14,4 +14,9 @@ class UsuarioModel
 
         return json_encode($arr);
     }
+
+    public static function registraUsuario($usuario, $senha)
+    {
+        return DB::query("INSERT INTO usuarios (usuario, senha) VALUES ('{$usuario}', '{$senha}')");
+    }
 }

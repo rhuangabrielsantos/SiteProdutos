@@ -18,4 +18,18 @@ class UsuarioControl
             }
         }
     }
+
+    public static function registraUsuario($usuario, $senha)
+    {
+        if (empty($usuario) || empty($senha)) {
+            echo "Preencha todos os campos!";
+        } else {
+            $result = UsuarioModel::registraUsuario($usuario, $senha);
+            if ($result == 1) {
+                echo "Registrado com Sucesso!";
+            } else {
+                echo "Usuario já em uso!";
+            }
+        }
+    }
 }
