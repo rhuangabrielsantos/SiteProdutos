@@ -15,8 +15,6 @@ class UsuarioControl
                 echo "Usuario ou Senha Inválidos";
             } else {
                 echo "Bem vindo!";
-                $login = true;
-                setcookie('login', '1');
             }
         }
     }
