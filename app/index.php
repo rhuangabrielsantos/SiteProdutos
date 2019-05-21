@@ -18,7 +18,7 @@ $valor_venda = $_POST['valor_venda'];
 
 //variaveis login
 $usuario = $_POST['usuario'];
-$senha = $_POST['senha'];
+$senha = md5($_POST['senha']);
 
 switch ($route) {
 
