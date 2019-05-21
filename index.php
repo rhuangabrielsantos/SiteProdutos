@@ -15,7 +15,7 @@ $alert = $_GET['error'];
     <script src="public/js/popper.js"></script>
     <script src="public/bootstrap/js/bootstrap.min.js"></script>
 </head>
-<body class="background">
+<body class="pageLogin">
 
 <form id="login" class="login">
     <h1>Login</h1>
@@ -40,7 +40,7 @@ $alert = $_GET['error'];
     });
 
     <?php if ($alert == true) {?>
-    alert("Hello world!");
+    alert("Por favor, faça login para continuar!");
     <?php } ?>
 </script>
 

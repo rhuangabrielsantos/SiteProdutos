@@ -25,10 +25,7 @@
     height: 270px;
 }
 
-.background {
+.pageLogin {
     background-image: url("/public/img/background.gif");
-}
-
-h1, label {
     color: white;
 }

@@ -6,7 +6,7 @@ if (!isset($_SESSION["logado"]) || $_SESSION["logado"] != TRUE) {
     header("Location:/index.php?error=true");
 }
 
-$id = $_POST['id'];
+$id = $_GET['id'];
 ?>
 
 
@@ -116,7 +116,7 @@ $id = $_POST['id'];
                 data: $('form').serialize(),
                 success: function ($msg) {
                     alert($msg);
-                    location.reload();
+                    location.href="/app/views/listarProdutos/index.php";
                 }
             })
         });
