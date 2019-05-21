@@ -1,4 +1,4 @@
-# Sistema Registro de produtos
+# Sistema Registro de Produtos
 
 Funçoes:
 
