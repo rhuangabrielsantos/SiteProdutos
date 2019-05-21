@@ -6,15 +6,16 @@ $alert = $_GET['error'];
 
 <html>
 <head>
-    <title>Bem Vindo!</title>
+    <title>Inicio</title>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/public/img/favicon.png">
     <link rel="stylesheet" href="public/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="public/css/meu-css.css">
     <script src="public/js/jquery-3.3.1.js"></script>
     <script src="public/js/popper.js"></script>
     <script src="public/bootstrap/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body class="background">
 
 <form id="login" class="login">
     <h1>Login</h1>
@@ -35,11 +36,11 @@ $alert = $_GET['error'];
 
 <script>
     $('#registro').click(function () {
-        location.href="app/views/registrarUsuario/index.php";
+        location.href="app/views/registrarUsuario/index.html";
     });
 
     <?php if ($alert == true) {?>
-    alert("Faça Login para continuar!");
+    alert("Hello world!");
     <?php } ?>
 </script>
 

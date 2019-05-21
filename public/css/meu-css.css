@@ -24,3 +24,11 @@
     width: 320px;
     height: 270px;
 }
+
+.background {
+    background-image: url("/public/img/background.gif");
+}
+
+h1, label {
+    color: white;
+}
