@@ -32,6 +32,7 @@ $alert = $_GET['error'];
 </form>
 
 <script src="public/js/verificaLogin.js"></script>
+
 <script>
     $('#registro').click(function () {
         location.href="app/views/registrarUsuario/index.php";
