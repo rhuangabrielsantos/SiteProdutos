@@ -9,7 +9,7 @@ $('#register').submit(function (event) {
         success: function ($msg) {
             alert($msg);
             if ($msg === "Registrado com Sucesso!"){
-                location.href="/index.html";
+                location.href="/index.php";
             }
         }
     })

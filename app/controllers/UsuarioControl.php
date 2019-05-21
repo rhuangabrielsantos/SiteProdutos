@@ -15,6 +15,8 @@ class UsuarioControl
                 echo "Usuario ou Senha Inválidos";
             } else {
                 echo "Bem vindo!";
+                session_start();
+                $_SESSION["logado"] = TRUE;
             }
         }
     }

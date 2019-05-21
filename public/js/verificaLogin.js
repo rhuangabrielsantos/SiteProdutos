@@ -9,7 +9,7 @@ $('#login').submit(function (event) {
         success: function ($msg) {
             alert($msg);
             if ($msg === "Bem vindo!"){
-                location.href="app/views/listarProdutos/index.html";
+                location.href="app/views/listarProdutos/index.php";
             }
         }
     })

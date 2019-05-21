@@ -36,5 +36,5 @@ function excluir(id) {
 }
 
 function editar(id) {
-    $("body").load("/app/views/alterarProduto/index.phtml", {id: id});
+    $("body").load("/app/views/alterarProduto/index.php", {id: id});
 }

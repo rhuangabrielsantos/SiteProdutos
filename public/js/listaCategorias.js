@@ -33,5 +33,5 @@ function excluir(id) {
 }
 
 function editar(id) {
-    $("body").load("/app/views/alterarCategoria/index.phtml", {id: id});
+    $("body").load("/app/views/alterarCategoria/index.php", {id: id});
 }

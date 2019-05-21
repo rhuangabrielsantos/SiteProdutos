@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION["logado"]) || $_SESSION["logado"] != TRUE) {
+    header("Location:/index.php?error=true");
+}
+?>
+
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -33,7 +43,7 @@
     <div>
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/index.html">Logout</a>
+                <a class="nav-link" href="/logout.php">Logout</a>
             </li>
         </ul>
     </div>

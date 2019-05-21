@@ -1,3 +1,9 @@
+<?php
+
+$alert = $_GET['error'];
+
+?>
+
 <html>
 <head>
     <title>Bem Vindo!</title>
@@ -28,8 +34,12 @@
 <script src="public/js/verificaLogin.js"></script>
 <script>
     $('#registro').click(function () {
-        location.href="app/views/registrarUsuario/index.html";
+        location.href="app/views/registrarUsuario/index.php";
     });
+
+    <?php if ($alert == true) {?>
+    alert("Faça Login para continuar!");
+    <?php } ?>
 </script>
 
 </body>
