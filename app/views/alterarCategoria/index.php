@@ -45,7 +45,7 @@ $id = $_GET['id'];
     <div>
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/logout.php">Logout</a>
+                <a class="nav-link" href="/app/index.php?controller=logout">Logout</a>
             </li>
         </ul>
     </div>

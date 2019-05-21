@@ -72,4 +72,8 @@ switch ($route) {
     case 'registraUsuario':
         UsuarioControl::registraUsuario($usuario, $senha);
         break;
+
+    case 'logout':
+        UsuarioControl::logout();
+        break;
 }
