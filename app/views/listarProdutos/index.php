@@ -12,6 +12,7 @@ if (!isset($_SESSION["logado"]) || $_SESSION["logado"] != TRUE) {
     <meta charset="UTF-8">
     <title>Lista dos Produtos</title>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="/public/img/favicon.png">
     <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="/public/css/meu-css.css">
     <script src="/public/js/jquery-3.3.1.js"></script>
