@@ -59,6 +59,7 @@ $id = $_GET['id'];
 
 <script src="/public/js/jquery-3.3.1.js"></script>
 
+
 <script>
     $(document).ready(function () {
         $.ajax({
@@ -78,7 +79,6 @@ $id = $_GET['id'];
                             '<div class="form-group">' +
                                 '<label>Categoria:</label>' +
                                 '<select class="custom-select" id="lista-categorias" name="categoria">' +
-                                '<option></option>' +
                                 '</select>' +
                             '</div>' +
 
