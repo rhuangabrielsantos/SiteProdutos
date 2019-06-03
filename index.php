@@ -18,26 +18,25 @@ $alert = $_GET['error'];
 <body class="pageLogin">
 
 <form id="login" class="login">
-    <h1>Login</h1>
-    <div class="form-group">
-        <label>Usuario:</label>
-        <input type="text" class="form-control" name="usuario" placeholder="Insira seu usuario">
+    <img src="public/img/logo.png" class="img">
+    <div class="divLogin">
+        <div class="form-group">
+            <input type="text" class="form-control" name="usuario" placeholder="Usuario">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" name="senha" placeholder="Senha">
+        </div>
+        <button type="submit" class="btn btn-primary">Entrar</button>
+        <a>Registre-se clicando</a><a href="javascript:void(0)" onclick="registro()"> Aqui</a>
     </div>
-    <div class="form-group">
-        <label>Senha:</label>
-        <input type="password" class="form-control" name="senha" placeholder="Insira sua senha">
-    </div>
-    <button type="submit" class="btn btn-primary">Entrar</button>
-    <a> </a>
-    <button type="button" id="registro" class="btn btn-secondary">Registrar</button>
 </form>
 
 <script src="public/js/verificaLogin.js"></script>
 
 <script>
-    $('#registro').click(function () {
-        location.href="app/views/registrarUsuario/index.html";
-    });
+    function registro(){
+        location.href = "app/views/registrarUsuario/index.html";
+    }
 
     <?php if ($alert == true) {?>
     alert("Por favor, faça login para continuar!");
