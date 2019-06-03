@@ -9,12 +9,34 @@ class CategoriaModel
         return DB::query("INSERT INTO categorias (nome) VALUES ('{$nome}')");
     }
 
-    static function listaCategoria()
+    static function listaCategoriaPagina()
     {
         $queryList = DB::query("SELECT * FROM categorias");
 
         while ($result = mysqli_fetch_assoc($queryList)) {
+
             $arr[] = $result;
+        }
+
+        return json_encode($arr);
+    }
+
+
+    static function listaCategoria($id)
+    {
+        $select = DB::query("SELECT c.id, c.nome FROM categorias AS c JOIN produtos AS p ON p.categoria = c.id WHERE p.id='{$id}'");
+
+        while ($result = mysqli_fetch_assoc($select)) {
+            $selecionado = $result;
+
+            $queryList = DB::query("SELECT * FROM categorias");
+
+            while ($result2 = mysqli_fetch_assoc($queryList)) {
+
+                if ($result2 != $selecionado) {
+                    $arr[] = $result2;
+                }
+            }
         }
 
         return json_encode($arr);
@@ -29,7 +51,7 @@ class CategoriaModel
     {
         $queryList = DB::query("SELECT * FROM categorias WHERE id='{$id}'");
 
-        while ($result = mysqli_fetch_assoc($queryList)){
+        while ($result = mysqli_fetch_assoc($queryList)) {
             $arr[] = $result;
         }
 

@@ -27,8 +27,12 @@ switch ($route) {
         CategoriaControl::adicionaCategoria($nome);
         break;
 
+    case 'listaCategoriaPagina':
+        CategoriaControl::listaCategoriaPagina();
+        break;
+
     case 'listaCategoria':
-        CategoriaControl::listaCategoria();
+        CategoriaControl::listaCategoria($id);
         break;
 
     case 'deletarCategoria':
