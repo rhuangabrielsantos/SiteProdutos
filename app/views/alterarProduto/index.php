@@ -79,6 +79,7 @@ $id = $_GET['id'];
                             '<div class="form-group">' +
                                 '<label>Categoria:</label>' +
                                 '<select class="custom-select" id="lista-categorias" name="categoria">' +
+                                    '<option value="'+ produtos.categoria +'">'+ produtos.nome +'</option>'+
                                 '</select>' +
                             '</div>' +
 
@@ -121,10 +122,25 @@ $id = $_GET['id'];
                 }
             })
         });
+
+        $(document).ready(function () {
+            $.ajax({
+                dataType: 'json',
+                type: "POST",
+                url: '/app/index.php?controller=listaCategoria',
+                data: {id: <?= $id ?>},
+                success: function (arr) {
+                    arr.forEach(categoria => {
+                        $('#lista-categorias').append(
+                            '<option value="' + categoria.id + '">' + categoria.nome + '</option>'
+                        )
+                    })
+                }
+            });
+        });
+
     });
 </script>
-
-<script src="/public/js/listaCategoriasForm.js"></script>
 
 </body>
 

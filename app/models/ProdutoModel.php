@@ -29,7 +29,7 @@ class ProdutoModel
 
     public static function idProduto($id)
     {
-        $queryList = DB::query("SELECT p.*,c.nome as categoria_nome 
+        $queryList = DB::query("SELECT p.*, c.nome 
                                     FROM produtos as p JOIN categorias as c on c.id=p.categoria WHERE p.id='{$id}';");
 
         while ($result = mysqli_fetch_assoc($queryList)) {

@@ -17,9 +17,16 @@ class CategoriaControl
         echo $msg;
     }
 
-    public static function listaCategoria()
+    public static function listaCategoriaPagina()
     {
-        $result = CategoriaModel::listaCategoria();
+        $result = CategoriaModel::listaCategoriaPagina();
+
+        echo $result;
+    }
+
+    public static function listaCategoria($id)
+    {
+        $result = CategoriaModel::listaCategoria($id);
 
         echo $result;
     }
