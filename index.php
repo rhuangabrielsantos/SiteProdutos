@@ -26,7 +26,7 @@ $alert = $_GET['error'];
         <div class="form-group">
             <input type="password" class="form-control" name="senha" placeholder="Senha">
         </div>
-        <button type="submit" class="btn btn-primary">Entrar</button>
+        <button type="submit" class="btn btn-primary btnLogin">Entrar</button>
         <a>Registre-se clicando</a><a href="javascript:void(0)" onclick="registro()"> Aqui</a>
     </div>
 </form>
