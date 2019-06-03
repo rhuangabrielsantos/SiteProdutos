@@ -12,18 +12,18 @@
 <body class="pageLogin">
 
 <form id="register" class="login">
-    <h1>Registrar-se</h1>
-    <div class="form-group">
-        <label>Usuario:</label>
-        <input type="text" class="form-control" name="usuario" placeholder="Insira um usuario">
+    <img src="/public/img/logo.png" class="img">
+    <div class="divLogin">
+        <div class="form-group">
+            <input type="text" class="form-control" name="usuario" placeholder="Insira um usuario">
+        </div>
+        <div class="form-group">
+
+            <input type="password" class="form-control" name="senha" placeholder="Insira uma senha">
+        </div>
+        <button type="submit" id="registro" class="btn btn-primary">Registrar</button>
+        <button type="button" class="btn" onclick="history.go(-1)">Voltar</button>
     </div>
-    <div class="form-group">
-        <label>Senha:</label>
-        <input type="password" class="form-control" name="senha" placeholder="Insira uma senha">
-    </div>
-    <button type="submit" id="registro" class="btn btn-primary">Registrar</button>
-    <a> </a>
-    <input type="button" class="btn btn-danger" value="Voltar" onClick="history.go(-1)">
 </form>
 
 <script src="/public/js/registraUsuario.js"></script>
